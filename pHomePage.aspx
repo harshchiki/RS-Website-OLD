@@ -206,7 +206,7 @@
                                     </div>    
                                 </div>
                             </div>
-                            <hr/>
+                            
                             <!-- Container (Dates & Timings) -->
                             <div id="Importantdates" class="row" divType="pageContent">
                                 <div class="col-md-2  "></div>
@@ -361,7 +361,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <hr/>
+                            
 
                             <!-- Container (Bi-Centenary. This is temporary and will be deleted in September 2018) -->
                             <div id="BiCent" class="row" divType="pageContent">
@@ -492,7 +492,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <hr/>
+                                
 
 
                             <!-- Container (GUIDELINES) -->
@@ -804,7 +804,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <hr/>
+                            
                             <!-- Container (Sant Sat Guru) -->
                             <div id="SantSatGuru" class="row" divType="pageContent">
                                 <div class="col-md-offset-2 col-md-10" style="height: auto;">
@@ -1538,7 +1538,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <hr/>
+                            
 
                             <!-- Container (Images) -->
                             <div id="Images" class="row ">
@@ -1555,7 +1555,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <hr/>
+                            
 
                             <!-- Container (Books) -->
                             <div id="Books" class="row " divType="pageContent">
@@ -1636,7 +1636,7 @@
                                     </asp:UpdatePanel>
                                 </div>
                             </div>
-                            <hr/>
+                            
 
                             <!-- Container (Audio Prose) -->
                             <div id="Audio" class="row " divType="pageContent">
@@ -1738,7 +1738,7 @@
                                     </asp:UpdatePanel>
                                 </div>
                             </div>
-                            <hr/>
+                            
                             <!-- Container (Shabd) -->
                             <div id="Shabd" class="row " divType="pageContent">
                                 <div class="col-md-2  ">
@@ -1830,7 +1830,7 @@
                                     </asp:UpdatePanel>
                                 </div>
                             </div>
-                            <hr/>
+                            
                             <!-- Container (Sant Bani) -->
                             <div id="SantBani" class="row " divType="pageContent">
                                 <div class="col-md-2  ">
@@ -1912,7 +1912,7 @@
                                     </asp:UpdatePanel>
                                 </div>
                             </div>
-                            <hr/>    
+                                
 
                             <!-- Container (Video Clips) -->
                             <div id="Videos" class="row ">
@@ -1999,7 +1999,7 @@
                                     </asp:UpdatePanel>
                                 </div>
                             </div>
-                            <hr/>
+                            
 
                             <!-- Container (Video Poetry) -->
                             <div id="Videopoetry" class="row " divType="pageContent">
@@ -2082,7 +2082,7 @@
                                     </asp:UpdatePanel>
                                 </div>
                             </div>
-                            <hr/>
+                            
 
                             <!-- Container (ABOUT SOAMI BAGH) -->
                             <div id="SoamiBagh" class="row ">
@@ -2144,7 +2144,7 @@
                                     <br/>
                                 </div>
                             </div>
-                            <hr/>
+                            
                         <!-- Container (HOLY PLACES) -->
                             <div id="HolyPlaces" class="row" divType="pageContent">
                                 <div class="col-md-2  "></div>
@@ -2380,7 +2380,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <hr/>
+                            
                             <!-- Container (How to reach?) -->
                             <div id="Howtoreach" class="row ">
                                     <div class="col-md-2 "></div>
@@ -2452,7 +2452,7 @@
                                         </div>
                                 </div>
                             </div>
-                            <hr/>
+                            
                             <!-- Container (General Indormation) -->
                             <div id="GenInfo" class="row " divType="pageContent">
                                 <div class="col-md-2 "></div>
@@ -2531,7 +2531,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <hr/>
+                            
                             <!-- Container (Book Ordering) -->
                             <div id="BookOrdering" class="row " divType="pageContent">
                                 <div class="col-md-2 "></div>
@@ -2545,7 +2545,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <hr/>
+                            
                             <!-- Container (ContactUs) -->
                             <div id="ContactUs" class="row" divType="pageContent">
                                 <div class="col-md-2 "></div>
@@ -2588,7 +2588,7 @@
                                     </div>                        
                                 </div>
                             </div>
-                            <hr/>
+                            
                             <div id="snackbar">This song is already added</div>
                             <div>
                             </div>
