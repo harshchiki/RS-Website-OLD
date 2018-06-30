@@ -1,0 +1,5 @@
+function glossary() {
+  var x = document.getElementById("Obeisance");
+    var x = "This is the meaning of the word Obeisance";
+    return x;
+}

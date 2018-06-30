@@ -1,0 +1,485 @@
+﻿.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.img-gallery:hover {
+    background-color: white;
+    border: 1px solid gray;
+    -webkit-transform: scale(2);
+    -moz-transform: scale(2);
+    -o-transform: scale(2);
+    transform: scale(2);
+    z-index: 10;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+    align-items: center;
+}
+
+@media only screen and (min-width:998px) {
+    .gurudwaraList {
+        margin-left:14em;
+    }
+}
+
+.meanHyperlinkFormat {
+    color: darkslategray;
+    background-color: #e8e8e8;
+    padding: 5px;
+}
+
+#form {
+    padding-left: 0px;
+}
+
+
+.HeaderDiv {
+    left: 0;
+    z-index: 98;
+    margin-left: 0px;
+    margin-right: 0px;
+    overflow: hidden;
+    background: linear-gradient(#7a7a7a,#ffffff);
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+#midDiv {
+    text-align: justify;
+    margin-top: 0px;
+}
+
+
+.LinksDiv {
+    height: 0px;
+    text-align: right;
+    background-color: #FFFFFF;
+    width: 100%;
+    margin-top: 120px;
+    right: 15px;
+    z-index: 100;
+}
+
+.bodyDivHeight {
+    /*height:1000px;*/
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+h3{
+    font-size: 24px;
+    color: #337ab7;
+}
+
+h4{
+    font-size: 20px;
+    color: #337ab7;
+}
+
+h5{
+    font-size: 16px;
+    color: #337ab7;
+}
+
+.liFloat{
+    float: left;
+    padding-left: 2em;
+    font-size:16px;
+    color: white;
+}
+
+.uText{
+    color:white;
+}
+
+th {
+    background-color: #337ab7;
+    color: white;
+    padding: 5px;
+}
+tr {
+    padding: 5px;
+}
+
+td {
+    padding: 5px;
+}
+
+tr:nth-child(odd) {background-color: #e5e5e5;}
+
+hr {
+    width: 50%;
+    display: block;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    border-color: #660000;
+}
+
+div {
+    padding-left: 10px;
+}
+
+h5 {
+    font-family: Calibri;
+    font-weight: bold;
+}
+
+.scrollbar {
+    float: left;
+    height: 600px;
+    width: 65px;
+    background: black;
+    overflow-y: scroll;
+    margin-bottom: 25px;
+}
+
+.force-overflow {
+    min-height: 1000px;
+}
+
+#Scroll_1::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 0px;
+    background-color: #292D30;
+}
+
+#Scroll_1::-webkit-scrollbar {
+    width: 10px;
+    background-color: #727272;
+    margin-right: 0px;
+}
+
+#Scroll_1::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #727272;
+}
+
+/* Audio Player Styles */
+
+tableAudio {
+    width: 150px;
+    background-color:#e5e5e5;
+}
+.playlist-container {
+    padding-left: 0px;
+    background-color:#e5e5e5;
+    color: #000000;
+}
+audio {
+    margin: 0 0 0 0;
+    width: 100%;
+}
+
+#mainwrap {
+    padding-left: 0px;
+}
+
+#audiowrap,
+#plwrap {
+    margin: 0 auto;
+    padding-left: 0px;
+}
+
+#tracks {
+    position: relative;
+    text-align: center;
+    height: 30px;
+}
+
+#nowPlay {
+    /*display: inline;*/
+    padding-left: 0px;
+}
+
+#npAction {
+    padding-left: 5px;
+}
+
+#npTitle {
+    padding-left: 5px;
+}
+
+#audio0 {
+    padding: 0;
+}
+
+#plList {
+    padding-left: 0px;
+    overflow-y: auto;
+    max-height:inherit;
+}
+#plList li {
+    cursor: pointer;
+    display: block;
+    margin: 0;
+    padding: 21px 0;
+}
+
+    #plList li:hover {
+        background-color: rgba(0,0,0,.1);
+    }
+
+.plItem {
+    position: relative;
+    padding-left: 0px;
+}
+
+.plTitle {
+    overflow: hidden;
+    position: absolute;
+    left: 25px;
+    text-overflow: ellipsis;
+    top: 0;
+    width:180px;
+}
+
+.plNum {
+    padding-left: 5px;
+    width: 25px;
+}
+
+.plLength {
+    padding-left: 21px;
+    position: absolute;
+    right: 10px;
+    top: 0;
+}
+
+.plSel,
+.plSel:hover {
+    background-color: rgba(0,0,0,.1);
+    color: #fff;
+    cursor: default !important;
+}
+
+a[id^="btn"] {
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 2rem;
+    height: 35px;
+    line-height: .8;
+    margin: 0 20px 20px;
+    padding: 5px 10px;
+    text-decoration: none;
+    transition: background .3s ease;
+    width: 35px;
+}
+
+    a[id^="btn"]:last-child {
+        margin-left: -4px;
+    }
+
+    a[id^="btn"]:hover,
+    a[id^="btn"]:active {
+        background-color: rgba(0,0,0,.1);
+        color: #fff;
+    }
+
+    a[id^="btn"]::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+    }
+
+
+/* Plyr Overrides
+================================================== */
+
+.plyr--audio .plyr__controls {
+    background-color: #e5e5e5;
+    border: none;
+    color: #000000;
+    padding: 20px 20px 20px 13px;
+    width: 100%;
+}
+
+    .plyr--audio .plyr__controls button.tab-focus:focus,
+    .plyr--audio .plyr__controls button:hover,
+    .plyr__play-large {
+        background: rgba(0,0,0,.1);
+    }
+
+.plyr__progress--played, .plyr__volume--display {
+    color: rgba(0,0,0,.1);
+}
+
+.plyr--audio .plyr__progress--buffer,
+.plyr--audio .plyr__volume--display {
+    background: rgba(0,0,0,.1);
+}
+
+.plyr--audio .plyr__progress--buffer {
+    color: rgba(0,0,0,.1);
+}
+
+
+/* Media Queries
+================================================== */
+
+@media only screen and (max-width:850px) {
+    #nowPlay {
+        display: none;
+    }
+}
+
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+#sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 200px;
+    z-index: 999;
+    transition: all 0.3s;
+}
+
+    #sidebar.active {
+        margin-left: -250px;
+    }
+
+    #sidebar .sidebar-header {
+        padding: 10px;
+        background: #337ab7;
+        color: #FFFFFF;
+    }
+
+#sidebarRemove {
+    float:right;
+}
+
+
+a.download {
+    background: #fff;
+    color: #337ab7;
+}
+
+a.article, a.article:hover {
+    background: #337ab7 !important;
+    color: #fff !important;
+}
+
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+ @media (max-width: 768px) {
+    #sidebar {
+        margin-left: 0;
+    }
+
+        #sidebar.active {
+            margin-left: -250px;
+        }
+
+    #sidebarCollapse span {
+        display: none;
+    }
+}
+
+/* Snack Bar */
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    background-color: #333; /* Black background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 50%; /* Center the snackbar */
+    bottom: 30px; /* 30px from the bottom */
+}
+
+snackbarShabd, #snackbarSant, #snackbarBachan, #snackbarVideoC, #snackbarVideoP, #snackbarBook {
+    visibility: hidden; /* Hidden by default. Visible on click */
+}
+
+    /* Show the snackbar when clicking on a button (class added with JavaScript) */
+    #snackbar.show, #snackbarShabd.show, #snackbarBachan.show, #snackbarSant.show, #snackbarVideoC.show, #snackbarVideoP.show, #snackbarBook.show {
+        visibility: visible; /* Show the snackbar */
+        /* Add animation: Take 0.5 seconds to fade in and out the snackbar. 
+However, delay the fade out process for 2.5 seconds */
+        /*        -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        animation: fadein 0.5s, fadeout 0.5s 2.5s;*/
+    }
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
