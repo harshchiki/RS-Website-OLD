@@ -86,7 +86,7 @@ $(document).ready(function ($) {
         if(anchorTag.hasAttribute("targetDiv")) {
             $(anchorTag).click(function(element){
                 $("div[divType='pageContent']").hide();
-                $("#"+$(anchorTag).attr("targetDiv")).html($("#"+$(anchorTag).attr("targetDiv")).html() + "<br /");
+                $("#"+$(anchorTag).attr("targetDiv")).html($("#"+$(anchorTag).attr("targetDiv")).html() + "<br /> <br />");
                 $("#"+$(anchorTag).attr("targetDiv")).show();
             })
         }
