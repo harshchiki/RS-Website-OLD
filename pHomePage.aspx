@@ -1541,7 +1541,7 @@
                             
 
                             <!-- Container (Images) -->
-                            <div id="Images" class="row ">
+                            <div id="Images" class="row " divType="pageContent">
                                 <div class="col-md-2  "></div>
                                 <div class="col-md-10 " style="height: auto;">
                                     <div class="row">
@@ -1915,7 +1915,7 @@
                                 
 
                             <!-- Container (Video Clips) -->
-                            <div id="Videos" class="row ">
+                            <div id="Videos" class="row " divType="pageContent">
                                 <div class="col-md-2 "></div>
                                 <div class="col-md-10 " style="height: auto;">
                                     <div class="row">
@@ -2084,66 +2084,7 @@
                             </div>
                             
 
-                            <!-- Container (ABOUT SOAMI BAGH) -->
-                            <div id="SoamiBagh" class="row ">
-                                <div class="col-md-2  "></div>
-                                <div class="col-md-10 " style="height: auto;">
-                                    <div class="row">
-                                        <div class="row" style="text-align: justify;">
-                                            <div class="col-md-12  " style="text-align: justify;">
-                                                <h3 style=" color: #337ab7">ABOUT SOAMI BAGH, AGRA
-                                                    <span>
-                                                        <a target="_blank" href="https://www.google.co.in/maps/place/Segal's/@27.2266923,77.9992609,14z/data=!4m8!1m2!2m1!1sSegal's,+1,+Dayal+Bagh+Rd,+Prem+Bhawan+Colony,+Dayal+Bagh,+Agra,+Uttar+Pradesh+282005,+India!3m4!1s0x397479fd695cb4b9:0x69917ccafa0d3b64!8m2!3d27.2211151!4d78.0101083?hl=en"
-                                                            id="map12">
-                                                            <img src="../images/location.jpg" style="outline:none;" height="25" width="25" alt="bottle"
-                                                                class="thumbnails" />
-                                                        </a>
-                                                    </span>
-                                                </h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12 " id="grab" style="width:100%;text-align: justify;outline:none" tabindex="1">
-                                        &emsp;&emsp;Soamiji Maharaj had His residence in the city. On account of charities and alms-giving, His house was all the
-                                        time surrounded by beggars and mendicants whose number went on increasing. This caused much
-                                        inconvenience and disturbance in Satang. Therefore, He decided to shift to some place outside
-                                        the city. He stayed in several bungalows and houses in the outskirts but did not have the
-                                        Mauj of a sojourn for more than 8-10 days in any one of them, as none of them was to His
-                                        liking. Then He started moving out of the city at some distance away on Sukhpal (palanquin)
-                                        which the Sadhus and Satsangis used to carry on their shoulders and visited various sites
-                                        in the vicinity of the city of Agra. Finally, He approved a site, about three miles north
-                                        of the city. There, He laid the foundation of a Bagh (garden) called Radhasoami Bagh or Soami
-                                        Bagh.
-                                        <a id="readmor6" onclick="functionexpand6()" style="cursor:pointer">
-                                            <u>Read More..</u>
-                                        </a>
-                                    </div>
-                                    <div id="readmore7" style="text-align: justify;display:none">
-                                        <br/><br/>&emsp;&emsp;At this site there was a piece of elevated land in the centre. Soamiji Maharaj
-                                        took His seat there. He ordered the water of the well, already existing there, to be fetched
-                                        for Him. On tasting it, He called aloud to Huzur Maharaj by His name and observed that it
-                                        was really good water. Soamiji Maharaj had sanctified the water of this well. The main portion
-                                        of Soami Bagh land was taken in the name of Soamiji Maharaj on November 9, 1876 at a lease
-                                        rent of Rs.12/- per year. Later the entire land of 5 Bighas, 16 Biswas including the well
-                                        (approx 14,500 sq.mts) was purchased at a cost of Rs.200/-.
-                                        <br/><br/> &emsp;&emsp;One morning, Soamiji Maharaj was taking a walk in the garden with three or four
-                                        Sadhus. One of the Sadhus, named Chetan Das, pointed towards a piece of elevated land in
-                                        the centre, and said that a Kothi (house, mansion) should be built there for Soamiji Maharaj,
-                                        for which it was very suitable. Soamiji Maharaj observed that a Guru Dwara would stand there.
-                                        All kept quiet. Nobody could understand the significance of the words.
-                                        <br/><br/> &emsp;&emsp;The entire Soami Bagh is a sanctuary for Satsangis because Soamiji Maharaj,
-                                        Huzur Maharaj, Maharaj Saheb and Babuji Maharaj walked here. It is for this reason that once
-                                        Babuji Maharaj was pleased to observe thus - How excellent is the water of this well (in
-                                        Soami Bagh). It is as healthy as Ghee (clarified butter). Children playing, sporting, frolicking,
-                                        walking, racing etc. in this garden (Soami Bagh) is as good as performing Abhyas or the devotional
-                                        practices.
-                                        <a onclick="functionhide6()" style="cursor:pointer">
-                                            <u>Read Less..</u>
-                                        </a>
-                                    </div>
-                                    <br/>
-                                </div>
-                            </div>
+                            
                             
                         <!-- Container (HOLY PLACES) -->
                             <div id="HolyPlaces" class="row" divType="pageContent">
@@ -2381,15 +2322,20 @@
                                 </div>
                             </div>
                             
-                            <!-- Container (How to reach?) -->
-                            <div id="Howtoreach" class="row ">
-                                    <div class="col-md-2 "></div>
-                                    <div class="col-md-10 ">
-                                        <div class="row " style="text-align: justify; ">
-                                            <div class="col-md-12 " style="text-align: justify; ">
-                                                <h3>HOW TO REACH?</h3>
+                            s
+                            
+                            <!-- Container (General Indormation) -->
+                            <div id="GenInfo" class="row ">
+                                <div class="col-md-10 ">
+                                    <div class="row " style="text-align: justify; ">
+                                        <div class="row" style="text-align: justify; margin-top: 190px;">
+                                            <h3>GENERAL INFORMATION</h3>
+                                            This section gives general information with respect to Weather, Accommodation, Initiation in the Faith, Offering (Bhent) and Prasad. 
+                                            <div class="col-md-12 " style="text-align: justify;outline:none" tabindex="1">
+                                                <!--This section is for How to reach-->
+                                                <h4>HOW TO REACH?</h4>
                                                 <div style="margin-left:15px">
-                                                    <h4 style=" color: #337ab7 ">SOAMI BAGH, AGRA</h4>
+                                                    <h5>SOAMI BAGH, AGRA</h5>
                                                     <div class="row " style="margin-bottom: 10px; ">
                                                         <table>
                                                             <tr>
@@ -2416,51 +2362,40 @@
                                                                 <td>Distance by Road</td>
                                                             </tr>
                                                         </table>
+                                                    </div>
+                                                    <h5>SOAMI BAGH, VARANASI</h5>
+                                                    <div class="row "  style="margin-bottom: 10px;">
+                                                        <table>
+                                                            <tr>
+                                                                <th style="width: 75px ">S. No.</th>
+                                                                <th style="width: 300px ">Source</th>
+                                                                <th style="width: 250px ">Distance from Soami Bagh</th>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>1.</td>
+                                                                <td>Varanasi Bus Stand</td>
+                                                                <td>3.0 kms</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2.</td>
+                                                                <td>Varanasi Jn Railway station</td>
+                                                                <td>3.5 kms</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>3.</td>
+                                                                <td>Varanasi Cantt Railway station</td>
+                                                                <td>5.5 kms</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>4.</td>
+                                                                <td>Varanasi Airport</td>
+                                                                <td>25 kms</td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                    <br/>
                                                 </div>
-                                                <h4 style=" color: #337ab7 ">SOAMI BAGH, VARANASI</h4>
-                                                <div class="row "  style="margin-bottom: 10px;">
-                                                    <table>
-                                                        <tr>
-                                                            <th style="width: 75px ">S. No.</th>
-                                                            <th style="width: 300px ">Source</th>
-                                                            <th style="width: 250px ">Distance from Soami Bagh</th>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>1.</td>
-                                                            <td>Varanasi Bus Stand</td>
-                                                            <td>3 kms</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>2.</td>
-                                                            <td>Varanasi Jn Railway station</td>
-                                                            <td>3.5 kms</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>3.</td>
-                                                            <td>Varanasi Cantt Railway station</td>
-                                                            <td>5.5 kms</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>4.</td>
-                                                            <td>Varanasi Airport</td>
-                                                            <td>25 kms</td>
-                                                        </tr>
-                                                    </table>
-                                                </div>
-                                                <br/>
                                             </div>
-                                        </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Container (General Indormation) -->
-                            <div id="GenInfo" class="row " divType="pageContent">
-                                <div class="col-md-2 "></div>
-                                <div class="col-md-10 ">
-                                    <div class="row " style="text-align: justify; ">
-                                        <div class="col-md-12 " style="text-align: justify; ">
-                                            <h3>GENERAL INFORMATION</h3>
-                                            This section gives general information with respect to Weather, Accommodation, Initiation in the Faith, Offering (Bhent) and Prasad. 
                                             <div class="col-md-12 " style="text-align: justify;outline:none" tabindex="1">
                                                 <!--This section is for Weather-->
                                                 <h4>WEATHER</h4>
@@ -2470,13 +2405,11 @@
                                                 In Agra and Varanasi, the summer lasts between March to June and the maximum temperature reaches to about 45&deg;C in some days of May/June. Summer is characterized by hot dry weather called 'Loo' which can cause heat stroke. Winter lasts between November to February and the minimum temparature drops up to 2&deg;C in some days of December/January. Rains are heavy and last between June to September. During this time, the humidity percentage in air is usually very high. Weather charts of both ciies are given below.
                                                 <br/>
                                                 <br/>
-                                                <b>Agra:</b>
-                                                <br/>
+                                                <h5>Agra:</h5>
                                                 <img src="images/Agra.gif" alt="" class="img-responsive HeaderDiv"/>
                                                 <br/>
                                                 <br/>
-                                                <b>Varanasi:</b>
-                                                <br/>
+                                                <h5>Varanasi:</h5>
                                                 <img src="images/Varanasi.gif" alt="" class="img-responsive HeaderDiv"/>
                                                 <br/>
                                                 <!--This section is for Accommodation details-->
@@ -2530,6 +2463,66 @@
                                         </div>
                                     </div>
                                 </div>
+                                <!-- Container (ABOUT SOAMI BAGH) -->
+                            <div id="SoamiBagh" class="row ">
+                                <div class="col-md-2  "></div>
+                                <div class="col-md-10 " style="height: auto;">
+                                    <div class="row">
+                                        <div class="row" style="text-align: justify;">
+                                            <div class="col-md-12  " style="text-align: justify;">
+                                                <h4 style=" color: #337ab7">ABOUT SOAMI BAGH, AGRA
+                                                    <span>
+                                                        <a target="_blank" href="https://www.google.co.in/maps/place/Segal's/@27.2266923,77.9992609,14z/data=!4m8!1m2!2m1!1sSegal's,+1,+Dayal+Bagh+Rd,+Prem+Bhawan+Colony,+Dayal+Bagh,+Agra,+Uttar+Pradesh+282005,+India!3m4!1s0x397479fd695cb4b9:0x69917ccafa0d3b64!8m2!3d27.2211151!4d78.0101083?hl=en"
+                                                            id="map12">
+                                                            <img src="../images/location.jpg" style="outline:none;" height="25" width="25" alt="bottle"
+                                                                class="thumbnails" />
+                                                        </a>
+                                                    </span>
+                                                </h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 " id="grab" style="width:100%;text-align: justify;outline:none" tabindex="1">
+                                        &emsp;&emsp;Soamiji Maharaj had His residence in the city. On account of charities and alms-giving, His house was all the
+                                        time surrounded by beggars and mendicants whose number went on increasing. This caused much
+                                        inconvenience and disturbance in Satang. Therefore, He decided to shift to some place outside
+                                        the city. He stayed in several bungalows and houses in the outskirts but did not have the
+                                        Mauj of a sojourn for more than 8-10 days in any one of them, as none of them was to His
+                                        liking. Then He started moving out of the city at some distance away on Sukhpal (palanquin)
+                                        which the Sadhus and Satsangis used to carry on their shoulders and visited various sites
+                                        in the vicinity of the city of Agra. Finally, He approved a site, about three miles north
+                                        of the city. There, He laid the foundation of a Bagh (garden) called Radhasoami Bagh or Soami
+                                        Bagh.
+                                        <a id="readmor6" onclick="functionexpand6()" style="cursor:pointer">
+                                            <u>Read More..</u>
+                                        </a>
+                                    </div>
+                                    <div id="readmore7" style="text-align: justify;display:none">
+                                        <br/><br/>&emsp;&emsp;At this site there was a piece of elevated land in the centre. Soamiji Maharaj
+                                        took His seat there. He ordered the water of the well, already existing there, to be fetched
+                                        for Him. On tasting it, He called aloud to Huzur Maharaj by His name and observed that it
+                                        was really good water. Soamiji Maharaj had sanctified the water of this well. The main portion
+                                        of Soami Bagh land was taken in the name of Soamiji Maharaj on November 9, 1876 at a lease
+                                        rent of Rs.12/- per year. Later the entire land of 5 Bighas, 16 Biswas including the well
+                                        (approx 14,500 sq.mts) was purchased at a cost of Rs.200/-.
+                                        <br/><br/> &emsp;&emsp;One morning, Soamiji Maharaj was taking a walk in the garden with three or four
+                                        Sadhus. One of the Sadhus, named Chetan Das, pointed towards a piece of elevated land in
+                                        the centre, and said that a Kothi (house, mansion) should be built there for Soamiji Maharaj,
+                                        for which it was very suitable. Soamiji Maharaj observed that a Guru Dwara would stand there.
+                                        All kept quiet. Nobody could understand the significance of the words.
+                                        <br/><br/> &emsp;&emsp;The entire Soami Bagh is a sanctuary for Satsangis because Soamiji Maharaj,
+                                        Huzur Maharaj, Maharaj Saheb and Babuji Maharaj walked here. It is for this reason that once
+                                        Babuji Maharaj was pleased to observe thus - How excellent is the water of this well (in
+                                        Soami Bagh). It is as healthy as Ghee (clarified butter). Children playing, sporting, frolicking,
+                                        walking, racing etc. in this garden (Soami Bagh) is as good as performing Abhyas or the devotional
+                                        practices.
+                                        <a onclick="functionhide6()" style="cursor:pointer">
+                                            <u>Read Less..</u>
+                                        </a>
+                                    </div>
+                                    <br/>
+                                </div>
+                            </div>
                             </div>
                             
                             <!-- Container (Book Ordering) -->
