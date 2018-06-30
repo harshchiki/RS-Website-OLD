@@ -89,11 +89,19 @@ $(document).ready(function ($) {
             $(anchorTag).click(function(event){
                 $("div[divType='pageContent']").hide();
                 $("#"+$(anchorTag).attr("targetDiv")).html($("#"+$(anchorTag).attr("targetDiv")).html() + "<br /> <br />");
-                $("#"+$(anchorTag).attr("targetDiv")).show();
+                
 
                 var activeElement = $("#"+$(anchorTag).attr("targetDiv"));
-                $(activeElement).css("margin-top", marginTop);
 
+                if($(window).width() < 500) {
+                    // mobile
+                    $(activeElement).css("margin-top", marginTop);
+                } else {
+                    var menuHeight = $("#bs-example-navbar-collapse-1").height();
+                    $(activeElement).css("margin-top", marginTop + menuHeight);
+                }
+
+                $("#"+$(anchorTag).attr("targetDiv")).show();
                 menuItemClickHandler(event);
             })
         }
@@ -118,7 +126,7 @@ var menuItemClickHandler = function(e) {
 
     var target = this.hash;
 
-    
+    /*
 
     var topOffset = 0; //#top should default to 0 so no need to calculate the difference between top and top :)
     if (target != "#top") { //If the 
@@ -131,7 +139,7 @@ var menuItemClickHandler = function(e) {
         'scrollTop': topOffset
     }, 900, 'swing', function () {
         window.location.hash = target;
-    });
+    });*/
     MenuToggle();
 }
 
