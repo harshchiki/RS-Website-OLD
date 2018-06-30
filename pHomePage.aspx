@@ -18,8 +18,8 @@
                 <asp:ScriptManager runat="server" ID="script"></asp:ScriptManager>
 
                 <!-- Container (Header) -->
-                <div id="pageBanner" class="row">
-                    <nav class="container-fluid navbar-fixed-top">
+                <div class="row">
+                    <nav id="pageBanner" class="container-fluid navbar-fixed-top">
                         <div role="navigation" class="row container-fluid">
                             <img src="Images/header.png" class="img-responsive HeaderDiv"/>
                         </div>

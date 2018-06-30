@@ -88,6 +88,10 @@ $(document).ready(function ($) {
                 $("div[divType='pageContent']").hide();
                 $("#"+$(anchorTag).attr("targetDiv")).html($("#"+$(anchorTag).attr("targetDiv")).html() + "<br /> <br />");
                 $("#"+$(anchorTag).attr("targetDiv")).show();
+
+                var marginTop = $("#pageBanner").height();
+                var activeElement = $("#"+$(anchorTag).attr("targetDiv"));
+                $(activeElement).css("margin-top", marginTop);
             })
         }
     });
