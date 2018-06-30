@@ -81,6 +81,8 @@ function hideSnackBarBook() {
 
 $(document).ready(function ($) {
 
+    var marginTop = $("#pageBanner").height();
+
     $('a').each(function(index, value){
         var anchorTag = value;
         if(anchorTag.hasAttribute("targetDiv")) {
@@ -89,12 +91,13 @@ $(document).ready(function ($) {
                 $("#"+$(anchorTag).attr("targetDiv")).html($("#"+$(anchorTag).attr("targetDiv")).html() + "<br /> <br />");
                 $("#"+$(anchorTag).attr("targetDiv")).show();
 
-                var marginTop = $("#pageBanner").height();
                 var activeElement = $("#"+$(anchorTag).attr("targetDiv"));
                 $(activeElement).css("margin-top", marginTop);
             })
         }
     });
+
+    $("#HomePage").css("margin-top", marginTop);
 
     myMenuOn = 1;
     $('a[href^="#"]').bind('click.smoothscroll', function (e) {
