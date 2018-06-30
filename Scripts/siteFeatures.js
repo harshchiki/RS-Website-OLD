@@ -86,43 +86,54 @@ $(document).ready(function ($) {
     $('a').each(function(index, value){
         var anchorTag = value;
         if(anchorTag.hasAttribute("targetDiv")) {
-            $(anchorTag).click(function(element){
+            $(anchorTag).click(function(event){
                 $("div[divType='pageContent']").hide();
                 $("#"+$(anchorTag).attr("targetDiv")).html($("#"+$(anchorTag).attr("targetDiv")).html() + "<br /> <br />");
                 $("#"+$(anchorTag).attr("targetDiv")).show();
 
                 var activeElement = $("#"+$(anchorTag).attr("targetDiv"));
                 $(activeElement).css("margin-top", marginTop);
+
+                menuItemClickHandler(event);
             })
         }
     });
 
     $("#HomePage").css("margin-top", marginTop);
 
+
+    if($(window).width()<500) {
+        $("#bs-example-navbar-collapse-1").css("z-index", -1);
+    }
+
     myMenuOn = 1;
-    $('a[href^="#"]').bind('click.smoothscroll', function (e) {
-        e.preventDefault();
-
-        var target = this.hash;
-
+    /*$('a[href^="#"]').bind('click.smoothscroll', function (e) {
         
-
-        var topOffset = 0; //#top should default to 0 so no need to calculate the difference between top and top :)
-        if (target != "#top") { //If the 
-            var topOffset = $(target).offset().top;
-        }
-
-
-
-        $('html, body').stop().animate({
-            'scrollTop': topOffset
-        }, 900, 'swing', function () {
-            window.location.hash = target;
-            });
-        MenuToggle();
-    });
+    });*/
 
 });
+
+var menuItemClickHandler = function(e) {
+    e.preventDefault();
+
+    var target = this.hash;
+
+    
+
+    var topOffset = 0; //#top should default to 0 so no need to calculate the difference between top and top :)
+    if (target != "#top") { //If the 
+        var topOffset = $(e.target).offset().top;
+    }
+
+
+
+    $('html, body').stop().animate({
+        'scrollTop': topOffset
+    }, 900, 'swing', function () {
+        window.location.hash = target;
+    });
+    MenuToggle();
+}
 
 function theFunction() {
     $('.imagepreview').attr('src', $(this).find('img').attr('src'));
