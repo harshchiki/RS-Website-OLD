@@ -116,7 +116,7 @@
                             <!-- Container (Home Page) -->
                             <div id="HomePage" class="row BorderDiv" divType="pageContent">
                                 <!--<div class="col-md-2  "></div>-->
-                                <div class="col-md-12 " style="height: auto;margin-top:170px;">
+                                <div class="col-md-12 " style="height: auto;">
                                     <div class="row">
                                         <div class="row" style="text-align: justify;">
                                             <div id="pageContent" class="col-md-12  " style="text-align: justify;">
@@ -2328,7 +2328,7 @@
                             <div id="GenInfo" class="row ">
                                 <div class="col-md-10 ">
                                     <div class="row " style="text-align: justify; ">
-                                        <div class="row" style="text-align: justify; margin-top: 190px;">
+                                        <div class="row" style="text-align: justify;">
                                             <h3>GENERAL INFORMATION</h3>
                                             This section gives general information with respect to Weather, Accommodation, Initiation in the Faith, Offering (Bhent) and Prasad. 
                                             <div class="col-md-12 " style="text-align: justify;outline:none" tabindex="1">
