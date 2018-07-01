@@ -26,7 +26,7 @@
                         <div role="navigation" class="row container-fluid">
                             <!-- Brand and toggle get grouped for better mobile display -->
                             <div role="navigation" class="row navbar-header  container-fluid" onclick="MenuToggle();">
-                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" style="margin-top:0px; margin-bottom:0px;">
                                 <span class="sr-only">Toggle navigation</span>
                                 <span class="glyphicon glyphicon-menu-hamburger"></span>
                                 </button>

@@ -81,6 +81,8 @@ function hideSnackBarBook() {
 
 $(document).ready(function ($) {
 
+    $("h3").css("margin-top", "5px");
+
     var marginTop = $("#pageBanner").height();
 
     $('a').each(function(index, value){
@@ -92,6 +94,10 @@ $(document).ready(function ($) {
                 
 
                 var activeElement = $("#"+$(anchorTag).attr("targetDiv"));
+
+                $("li.active").removeClass("active");
+
+                $(anchorTag).parent().addClass("active");
 
                 if($(window).width() < 500) {
                     // mobile
