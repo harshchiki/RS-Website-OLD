@@ -3,9 +3,12 @@
 //    new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'hi,kn', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
 //}
 
+var widthThreshold = 700;
+
+
 myMenuOn = 1;
 function MenuToggle() {
-    if ($(window).width() < 500) {
+    if ($(window).width() < widthThreshold) {
         $("#bs-example-navbar-collapse-1").toggle(300);
 /*       if (myMenuOn == 1) {
            $("#bs-example-navbar-collapse-1").hide(300);
@@ -79,47 +82,78 @@ function hideSnackBarBook() {
     x.className = "";
 }
 
-$(document).ready(function ($) {
 
+
+var onLoad = function () {
+    $("div[divType='pageContent']").hide();
+
+    // hardcoding
+    if ($(window).width() >= widthThreshold) {
+        var marginTop = $("#pageBanner").height() + $("#menuButtonContainer").height();
+        // marginTop = $("#pageBanner").height() + $("button[data-target='#bs-example-navbar-collapse-1']").height();
+        $("#HomePage").css("margin-top", marginTop + 15);
+    } else {
+        var mobileMarginTop = $("#pageBanner").height() + $("#menuButtonContainer").height();
+        $("#HomePage").css("margin-top", mobileMarginTop + 5);
+    }
+    $("#HomePage").show();
+
+    //highlight 
+    $("a[targetDiv='HomePage']").parent().addClass("active");
+}
+
+$(document).ready(function ($) {
     $("h3").css("margin-top", "5px");
 
-    var marginTop = $("#pageBanner").height();
 
+    var marginTop = $("#pageBanner").height() + $("#menuButtonContainer").height();
     $('a').each(function(index, value){
         var anchorTag = value;
         if(anchorTag.hasAttribute("targetDiv")) {
-            $(anchorTag).click(function(event){
+            $(anchorTag).click(function (event) {
+
+                menuItemClickHandler(event);
+
                 $("div[divType='pageContent']").hide();
                 $("#"+$(anchorTag).attr("targetDiv")).html($("#"+$(anchorTag).attr("targetDiv")).html() + "<br /> <br />");
                 
 
-                var activeElement = $("#"+$(anchorTag).attr("targetDiv"));
+                
+                var activeELement = $("#" + $(anchorTag).attr("targetDiv"));
 
                 $("li.active").removeClass("active");
-
                 $(anchorTag).parent().addClass("active");
 
-                if($(window).width() < 500) {
-                    // mobile
-                    $(activeElement).css("margin-top", marginTop);
+                marginTop = $("#pageBanner").height() + $("#menuButtonContainer").height();
+
+                if ($(window).width() < widthThreshold) {
+                    $(activeELement).css("margin-top", marginTop + 5);
                 } else {
-                    var menuHeight = $("#bs-example-navbar-collapse-1").height();
-                    $(activeElement).css("margin-top", marginTop + menuHeight);
+                   // var menuHeight = $("#bs-example-navbar-collapse-1").height();
+
+                    // hard-coding
+                    $(activeELement).css("margin-top", marginTop + 15);
+                   // $("#pageContent").css("margin-top", marginTop);
+                   // $(activeELement).css("margin-top", "200px");
                 }
 
-                $("#"+$(anchorTag).attr("targetDiv")).show();
-                menuItemClickHandler(event);
+                //$(activeELement).css("margin-top", "177.212px");
+
+                $("#" + $(anchorTag).attr("targetDiv")).show();
+
+                
             })
         }
+
+        onLoad();
     });
+    
+    //$("#HomePage").css("margin-top", marginTop);
 
-    $("#HomePage").css("margin-top", marginTop);
 
-
-    if($(window).width()<500) {
+    if ($(window).width() < widthThreshold) {
         $("#bs-example-navbar-collapse-1").css("z-index", -1);
     }
-
     myMenuOn = 1;
     /*$('a[href^="#"]').bind('click.smoothscroll', function (e) {
         
@@ -127,7 +161,7 @@ $(document).ready(function ($) {
 
 });
 
-var menuItemClickHandler = function(e) {
+var menuItemClickHandler = function (e) {
     e.preventDefault();
 
     var target = this.hash;
@@ -139,7 +173,13 @@ var menuItemClickHandler = function(e) {
         var topOffset = $(e.target).offset().top;
     }
 
+    topOffset = $("#pageBanner").height();
 
+    if ($(window).width() >= 500) {
+        topOffset += $("#bs-example-navbar-collapse-1").height();
+    }
+
+   
 
     $('html, body').stop().animate({
         'scrollTop': topOffset

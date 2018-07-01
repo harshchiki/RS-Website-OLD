@@ -19,21 +19,21 @@
 
                 <!-- Container (Header) -->
                 <div class="row">
-                    <nav id="pageBanner" class="container-fluid navbar-fixed-top">
-                        <div role="navigation" class="row container-fluid">
+                    <nav class="container-fluid navbar-fixed-top">
+                        <div role="navigation" class="row container-fluid" id="pageBanner">
                             <img src="Images/header.png" class="img-responsive HeaderDiv"/>
                         </div>
                         <div role="navigation" class="row container-fluid">
                             <!-- Brand and toggle get grouped for better mobile display -->
-                            <div role="navigation" class="row navbar-header  container-fluid" onclick="MenuToggle();">
-                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" style="margin-top:0px; margin-bottom:0px;">
+                            <div role="navigation" class="row navbar-header  container-fluid" id="menuButtonContainer">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" style="margin-top:0px; margin-bottom:0px;" onclick="MenuToggle();">
                                 <span class="sr-only">Toggle navigation</span>
                                 <span class="glyphicon glyphicon-menu-hamburger"></span>
                                 </button>
                                 <a class="navbar-brand" href="#">MENU</a>
                             </div>
                             <!-- Collect the nav links, forms, and other content for toggling -->
-                            <div role="navigation" class="row collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <div role="navigation" class="row collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="z-index:-1;padding:-5px;">
                                 <ul class="nav nav-tabs">
                                     <li role="presentation" class="active"><a targetDiv="HomePage">Home Page</a></li>
                                     
@@ -120,7 +120,7 @@
                                     <div class="row">
                                         <div class="row" style="text-align: justify;">
                                             <div id="pageContent" class="col-md-12  " style="text-align: justify;">
-                                                <h3 style="margin-top: 40px;">INTRODUCTION</h3>
+                                                <h3>INTRODUCTION</h3>
                                                 &emsp;&emsp;Finding the Jivas in acute distress and delusion, and that they have deviated considerably from true Parmarth
                                                 and are totally incapable of releasing themselves from the bondages of birth and death, the
                                                 Supreme Being Radhasoami Dayal was moved with immense compassion. He incarnated Himself in
@@ -2322,10 +2322,10 @@
                                 </div>
                             </div>
                             
-                            s
+                            
                             
                             <!-- Container (General Indormation) -->
-                            <div id="GenInfo" class="row ">
+                            <div id="GenInfo" class="row " divType="pageContent">
                                 <div class="col-md-10 ">
                                     <div class="row " style="text-align: justify; ">
                                         <div class="row" style="text-align: justify;">
