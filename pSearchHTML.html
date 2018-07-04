@@ -1,0 +1,110 @@
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <link href="Content/bootstrap.min.css" rel="stylesheet" />
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      
+      <!-- Javascript -->
+      <script>
+         /*$(function() {
+            var relatedToValues  =  [
+               "Biography",
+               "Poetry",
+               "Prose"
+            ];
+            $( "#relatedTo" ).autocomplete({
+               source: relatedToValues
+            });
+
+
+
+
+            var authorValues = [
+            	"Soamiji Maharaj",
+            	"Huzur Maharaj",
+            	"Maharaj Saheb"
+            ];
+            $("#authorTranslator").autocomplete({
+            	source:authorValues
+            });
+
+
+            var languages = [
+            	"English",
+            	"Hindi"
+            ];
+            $("#language").autocomplete({
+            	source:languages
+            })
+
+
+         });*/
+      </script>
+   </head>
+   
+   <body>
+      
+   	<div class="row">
+
+   	  <div class="col-sm-3">
+	      
+	         <label for = "relatedTo">Related To: </label>
+	         <!--<input id = "relatedTo">-->
+	         <select id="relatedToSelect">
+	         	<option value="Biography">Biography</option>
+	         	<option value="Prose">Prose</option>
+	         	<option value="Poetry">Poetry</option>
+	         </select>
+	      
+	  </div>
+
+
+	  <div class="col-sm-3">
+	      
+	         <label for = "authorTranslator">Author/Translator: </label>
+	         <!--<input id = "authorTranslator">-->
+	         <select id="authorTranslatorSelect">
+	         	<option value="Soamiji Maharaj">Soamiji Maharaj</option>
+	         	<option value="Huzur Maharaj">Huzur Maharaj</option>
+	         	<option value="Maharaj Saheb">Maharaj Saheb</option>
+	         </select>
+	      
+	  </div>
+
+
+
+	  <div class="col-sm-3">
+	      
+	         <label for = "language">Language: </label>
+	         <!--<input id = "language">-->
+	         <select id="languageSelect">
+	         	<option value="English">English</option>
+	         	<option value="Hindi">Hindi</option>
+	         </select>
+	      
+	  </div>
+
+	  <div class="col-sm-3">
+	  	<label>Search:</label>
+	  	<input type="text" id="customSearchInput"/>
+	  </div>
+
+	</div>
+
+<!-- Top row ends above-->
+
+	<input type="button" id="searchBtn" value="Search" />
+
+   </body>
+</html>
+
+<!--
+	Filters:
+		related to: 
+		author/translator:
+		language:
+		custom search:
+	-->
