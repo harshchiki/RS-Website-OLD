@@ -31,6 +31,8 @@ body {
   text-decoration: none;
   /*font-size: 16px;*/
   height:35px;
+  text-align:left;
+  cursor:pointer;
 }
 
 .topnav a:hover {
@@ -82,7 +84,7 @@ body {
 
 .sticky {
   position: fixed;
-  top: 0;
+  top: 0px;
   width: 100%;
 }
 </style>
@@ -102,7 +104,7 @@ body {
 <div class="topnav" id="pageNavigation">
   <a class="menuItem active" targetDiv="HomePage" id="menuItemHomePage">Home Page</a>
   <a class="menuItem" targetDiv="Importantdates" id="menuItemCalendar">Calender</a>
-  <a class="menuItem" targetDiv="BiCent" id="menuItemBiCent"><u>Bi-Centenary</u></a>
+  <a class="menuItem" targetDiv="BiCent" id="menuItemBiCent" style="text-decoration: underline;">Bi-Centenary</a>
   <a class="menuItem" targetDiv="conduct" id="menuItemGuidelines">Guidelines</a>
   <a class="menuItem" targetDiv="SantSatGuru" id="menuItemSantSatGuru">Sant Sat Guru</a>
   <a class="menuItem" targetDiv="HolyPlaces" id="menuItemHolyPlaces">Holy Places</a>
@@ -588,8 +590,8 @@ body {
 
       $("a.active").show();
 
-      $("a.menuItem").width($(window).width());
-      $("a.menuItem").css("width",$(window).width());
+      $("a.menuItem").width($(window).width() - $("a.icon").outerWidth()-3);
+      $("a.menuItem").css("width",$(window).width() - $("a.icon").outerWidth()-3);
     }
   }
 var myFunction = function() {
@@ -605,7 +607,8 @@ var myFunction = function() {
 
 
 $(document).ready(function(){
-  if($(window).width() < 600) {
+  //if($(window).width() < 600) {
+  if($("a.icon").is(":visible")) {
     // styling
     // mobile view
     $("#pageBanner").css("max-height","50px");
@@ -614,8 +617,12 @@ $(document).ready(function(){
 
     $("a.menuItem").hide();
     $("a.active").show();
+
+    $("a.active").width($(window).width() - $("a.icon").outerWidth()-3);
+    $("a.active").css("width", $(window).width() - $("a.icon").outerWidth()-3);
   } else {
     $("a.menuItem").css("font-size","16px");
+    $("body").css("font-weight","");
   }
 
 
@@ -642,8 +649,14 @@ var handleStickinessMenuBar = function() {
 
   if (window.pageYOffset > sticky) {
     $("#pageNavigation").addClass("sticky");
+    $("#pageNavigation").css("top","0px");
+    $("#pageNavigation").css("position","fixed");
+    $("#pageNavigation").css("width","100%");
   } else {
     $("#pageNavigation").removeClass("sticky");
+    $("#pageNavigation").css("top","");
+    $("#pageNavigation").css("position","");
+    $("#pageNavigation").css("width","");
   }
 }
 </script>
