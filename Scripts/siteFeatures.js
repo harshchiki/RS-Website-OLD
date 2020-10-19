@@ -3,9 +3,12 @@
 //    new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'hi,kn', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
 //}
 
+var widthThreshold = 700;
+
+
 myMenuOn = 1;
 function MenuToggle() {
-    if ($(window).width() < 500) {
+    if ($(window).width() < widthThreshold) {
         $("#bs-example-navbar-collapse-1").toggle(300);
 /*       if (myMenuOn == 1) {
            $("#bs-example-navbar-collapse-1").hide(300);
@@ -43,17 +46,20 @@ function showSnackBarSant() {
     x.className = "show";
 }
 function hideSnackBarSant() {
+ 
     var x = document.getElementById("snackbarSant");
     x.className = "";
 }
-function showSnackBarShabd() {
-    var x = document.getElementById("snackbarShabd");
-    x.className = "show";
-}
-function hideSnackBarShabd() {
-    var x = document.getElementById("snackbarShabd");
-    x.className = "";
-}
+//function showSnackBarShabd() {
+//    var x = document.getElementById("snackbarShabd");
+//    x.className = "show";
+//    document.getElementById("snackbarShabd").style.display = "block";
+//}
+//function hideSnackBarShabd() {
+//    var x = document.getElementById("snackbarShabd");
+//    x.className = "";
+//    document.getElementById("snackbarShabd").style.display = "none";
+//}
 function showSnackBarVideoC() {
     var x = document.getElementById("snackbarVideoC");
     x.className = "show";
@@ -79,42 +85,114 @@ function hideSnackBarBook() {
     x.className = "";
 }
 
-$(document).ready(function ($) {
 
+
+var onLoad = function () {
+    $("div[divType='pageContent']").hide();
+
+    // hardcoding
+    if ($(window).width() >= widthThreshold) {
+        var marginTop = $("#pageBanner").height() + $("#menuButtonContainer").height();
+        // marginTop = $("#pageBanner").height() + $("button[data-target='#bs-example-navbar-collapse-1']").height();
+        $("#HomePage").css("margin-top", marginTop + 15);
+    } else {
+        var mobileMarginTop = $("#pageBanner").height() + $("#menuButtonContainer").height();
+        $("#HomePage").css("margin-top", mobileMarginTop + 5);
+    }
+    $("#HomePage").show();
+
+    //highlight 
+    $("a[targetDiv='HomePage']").parent().addClass("active");
+
+    $("td").attr("nowrap", "");
+}
+
+$(document).ready(function ($) {
+    $("h3").css("margin-top", "5px");
+
+
+    var marginTop = $("#pageBanner").height() + $("#menuButtonContainer").height();
     $('a').each(function(index, value){
         var anchorTag = value;
         if(anchorTag.hasAttribute("targetDiv")) {
-            $(anchorTag).click(function(element){
+            $(anchorTag).click(function (event) {
+
+                menuItemClickHandler(event);
+
                 $("div[divType='pageContent']").hide();
-                $("#"+$(anchorTag).attr("targetDiv")).show();
+                $("#"+$(anchorTag).attr("targetDiv")).html($("#"+$(anchorTag).attr("targetDiv")).html() + "<br /> <br />");
+                
+
+                
+                var activeELement = $("#" + $(anchorTag).attr("targetDiv"));
+
+                $("li.active").removeClass("active");
+                $(anchorTag).parent().addClass("active");
+
+                marginTop = $("#pageBanner").height() + $("#menuButtonContainer").height();
+
+                if ($(window).width() < widthThreshold) {
+                    $(activeELement).css("margin-top", marginTop + 5);
+                } else {
+                   // var menuHeight = $("#bs-example-navbar-collapse-1").height();
+
+                    // hard-coding
+                    $(activeELement).css("margin-top", marginTop + 15);
+                   // $("#pageContent").css("margin-top", marginTop);
+                   // $(activeELement).css("margin-top", "200px");
+                }
+
+                //$(activeELement).css("margin-top", "177.212px");
+
+                $("#" + $(anchorTag).attr("targetDiv")).show();
+
+                
             })
         }
-    });
 
+        onLoad();
+    });
+    
+    //$("#HomePage").css("margin-top", marginTop);
+
+
+    if ($(window).width() < widthThreshold) {
+        $("#bs-example-navbar-collapse-1").css("z-index", -1);
+    }
     myMenuOn = 1;
-    $('a[href^="#"]').bind('click.smoothscroll', function (e) {
-        e.preventDefault();
-
-        var target = this.hash;
-
+    /*$('a[href^="#"]').bind('click.smoothscroll', function (e) {
         
-
-        var topOffset = 0; //#top should default to 0 so no need to calculate the difference between top and top :)
-        if (target != "#top") { //If the 
-            var topOffset = $(target).offset().top;
-        }
-
-
-
-        $('html, body').stop().animate({
-            'scrollTop': topOffset
-        }, 900, 'swing', function () {
-            window.location.hash = target;
-            });
-        MenuToggle();
-    });
+    });*/
 
 });
+
+var menuItemClickHandler = function (e) {
+    e.preventDefault();
+
+    var target = this.hash;
+
+    /*
+
+    var topOffset = 0; //#top should default to 0 so no need to calculate the difference between top and top :)
+    if (target != "#top") { //If the 
+        var topOffset = $(e.target).offset().top;
+    }
+
+    topOffset = $("#pageBanner").height();
+
+    if ($(window).width() >= 500) {
+        topOffset += $("#bs-example-navbar-collapse-1").height();
+    }
+
+   
+
+    $('html, body').stop().animate({
+        'scrollTop': topOffset
+    }, 900, 'swing', function () {
+        window.location.hash = target;
+    });*/
+    MenuToggle();
+}
 
 function theFunction() {
     $('.imagepreview').attr('src', $(this).find('img').attr('src'));
@@ -349,6 +427,7 @@ function Pause1() {
 function functionp() {
     window.open("Login.aspx ", "_Parent ");
 }
+
 $(document).resize(function () {
     if ($(this).width() <= y) {
         $('body').addClass('overflow');

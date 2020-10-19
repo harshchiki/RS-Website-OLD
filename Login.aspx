@@ -1,7 +1,5 @@
 ﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="Login.aspx.vb" Inherits="Login" %>
-
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Login Page</title>
@@ -12,31 +10,45 @@
     <script src="Scripts/bootstrap.js"></script>
 
     <style>
-        .tableContent tr {
+        .field-icon {
+  float: right;
+  margin-left: -25px;
+  margin-top: -25px;
+  position: relative;
+  z-index: 2;
+}
 
-    height:35px;
-    border:none;
+.container{
+  padding-top:50px;
+  margin: auto;
 }
-.a_button {
-    margin: 20px;
-    height: 40px;
-    width: 150px;
-   
-       font-size: 18px;
-    border-radius: 5px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-  .HeaderDiv {
-            /*height: 150px;*/
-            /*background-color: #ade2ff;*/
-            left: 0;
-            z-index: 98;
-            margin-left: 0px;
-            margin-right: 0px;
-            height: 125px;
-            overflow-y: hidden;
+        .tableContent tr {
+            height: 35px;
+            border: none;
         }
-   .img-gallery:hover {
+
+        .a_button {
+            margin: 20px;
+            height: 40px;
+            width: 150px;
+            font-size: 18px;
+            border-radius: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .HeaderDiv {
+             left: 0;
+    z-index: 98;
+    margin-left: 0px;
+    margin-right: 0px;
+    overflow: hidden;
+    background: linear-gradient(#7a7a7a,#ffffff);
+    width: 100%;
+    top: 0;
+    left: 0;
+        }
+
+        .img-gallery:hover {
             background-color: white;
             border: 1px solid gray;
             -webkit-transform: scale(2);
@@ -50,21 +62,23 @@
             transition: all 0.5s ease-out;
             align-items: center;
         }
-.tableContent td {
-    text-align: left;
-    width:250px;
-    /*border:solid;*/
-}
 
-.tableContent td:first-child {
-    width:150px;
-    /*text-align:right;*/
-}
-body{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        .tableContent td {
+            text-align: left;
+            width: 250px;
+            /*border:solid;*/
+        }
 
-}
- .LinksDiv {
+            .tableContent td:first-child {
+                width: 150px;
+                /*text-align:right;*/
+            }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .LinksDiv {
             /*z-index: 95;*/
             height: 30px;
             text-align: right;
@@ -75,44 +89,19 @@ body{
             right: 15px;
             z-index: 100;
         }
+
     </style>
 </head>
-<body>
-  
+<body style ="overflow :hidden ">
+
     <form id="form1" runat="server">
-        
-          <!-- Container (Header) -->
-        <div id="Header" class="page-content HeaderDiv" style="background-color: #cdf7f6;position: fixed; top: 0; left: 0; width: 100%;">
-            <div class="row" style="background-color: #cdf7f6; width: 100%;">
-                <div class="col-md-4" style="margin: auto; text-align: center; height: 100px">
-                    <a href="#" onclick="return theFunction();">
-                        <img src="Images/Pic1.gif" style="height: 100%" /></a>
-                    <a href="#" onclick="return theFunction1();">
-                        <img src="Images/Pic2.gif" style="height: 100%" /></a>
-                    <a href="#" onclick="return theFunction2();">
-                        <img src="Images/Pic3.gif" style="height: 100%" /></a>
-                </div>
-                <div class="col-md-4" style="margin: auto; height: 100px;">
-                    <h4 style="text-align: center; font-weight: bolder">Grant Merciful Radhasoami, Thy Grace and Protection
-                    </h4>
-                    <h6 style="text-align: center;font-size:14px">राधास्वामी दयाल की दया, राधास्वामी सहाय
-                    </h6>
-                    <h4 style="text-align: center; font-weight: bolder">Radhasoami Satsang, Soami Bagh, Agra
-                    </h4>
-                </div>
-                <div class="col-md-4" style="margin: auto; text-align: center; height: 100px">
-                    <a href="#" onclick="return theFunction3();">
-                        <img src="Images/Pict4.gif" style="height: 100%" /></a>
-                    <a href="#" onclick="return theFunction4();">
-                        <img src="Images/Pic5.gif" style="height: 100%" /></a>
-                    <a href="#" onclick="return theFunction5();">
-                        <img src="Images/Pic6.gif" style="height: 100%" /></a>
-                </div>
 
-            </div>
+        <!-- Container (Header) -->
+
+
+        <div role="navigation" class="row container-fluid" id="pageBanner">
+            <img src="Images/header.png" class="img-responsive HeaderDiv" />
         </div>
-
-
         <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -174,17 +163,17 @@ body{
             </div>
         </div>
 
-         <!-- Container (LinksRow) -->
-        <div id="LinksRow" class="row LinksDiv" style="position: fixed">
-            <div class="row"  style="cursor: pointer; left: 35px; position: sticky">
-        <span>       <p onclick="functionlogin()" Font-Underline="true" style="color: darkblue; left: 30px;  position: fixed;">Login |</p><p onclick="functionregistration()"  style="color:darkblue;  left: 75px;  position: fixed;">Registration</p></span> 
-            </div>
-        </div>
+        <!-- Container (LinksRow) -->
+          <asp:ScriptManager runat ="server" ID ="script1"></asp:ScriptManager>
+                <asp:UpdatePanel runat ="server" ID ="update1">
+                    <ContentTemplate >
         <center>
             <br />
-            <div class="row" id="login" style="margin-top:200px; background-color:darkgrey;border-radius:25px;width:50%">
-    <h1>Radhasoami</h1
+           
+            <div class="row" id="login" style="margin-top:100px; background-color:darkgrey;border-radius:25px;width:50%;height :300px">
+    <h1>Radhasoami</h1>
                 <h3>Welcome To RadhaSoami Faith Website</h3>
+              
                 <table class="tableContent">
                     <tr>
                         <td>
@@ -199,19 +188,25 @@ body{
                              <asp:Label runat="server" ID="lblpass" Text="Password*:"></asp:Label>
                         </td>
                         <td>
-                            <asp:TextBox runat="server" ID="txtpass"></asp:TextBox>
-                        </td>
+                                   <asp:Textbox runat ="server"  type="password" placeholder="Password" ID="txtpass" class="masked" name="password" />
+<button type="button" id="eye">
+    <img src="https://cdn0.iconfinder.com/data/icons/feather/96/eye-16.png" alt="eye" />
+</button>
                     </tr>
-                </table>
+                        </table>
                 <asp:Label runat="server" Visible="false" ForeColor="Red" ID="msginfo">
                 </asp:Label>
-                <br />
+             <br />
                 <asp:Button runat="server" ID="btnlogin" Text="Login"  Class="a_button" CausesValidation="false"    />
-             
-    </div>
-            <div class="row" id="registration" style="margin-top:180px;width:80%;background-color:darkgrey;border-radius:25px;display:none;">
-
-            <h1>Registration</h1>
+          <table class ="tableContent" ><tr>
+              <td style ="width:70px"><a onclick="functionregistration()"  style="color:darkblue;cursor:pointer ; position: fixed;" >New User</a> </td>
+              <td style ="width:70px"><a onclick="functionforgotpassword()"  style="color:darkblue;cursor:pointer ; position: fixed;" >|&nbsp; Forgot Password</a></td></tr></table>  
+              </div>
+                </center>
+        <center>
+            <div class="row" id="registration" style="margin-left:35px; margin-top:50px;width:80%;background-color:darkgrey;border-radius:25px;display:none;">
+               
+            <h3>Registration</h3>
         <table class="tableContent">            
             <tr>
                 <td>
@@ -238,7 +233,8 @@ body{
                     <asp:label runat="server" ID="Label7" Text="Mobile*:" ></asp:label>
                 </td>
                 <td>
-                    <asp:Textbox runat="server" ID="txtmobile" ></asp:Textbox>
+                    <asp:Textbox runat="server" ID="txtmobile" TextMode="Phone" ></asp:Textbox>
+                    
                 </td>
             </tr>
             <tr>
@@ -260,13 +256,13 @@ body{
             </tr>
             <tr>
                  <td>
-                    <asp:label runat="server" ID="Label1" Text="Address:" ></asp:label>
+                    <asp:label runat="server" ID="Label1" Text="Address*:" ></asp:label>
                 </td>
                 <td>
                     <asp:Textbox runat="server" ID="txtadd"></asp:Textbox>
                 </td>
                  <td>
-                    <asp:label runat="server" ID="Street" Text="Street:" ></asp:label>
+                    <asp:label runat="server" ID="Street" Text="Street*:" ></asp:label>
                 </td>
                 <td>
                     <asp:Textbox runat="server" ID="txtstreet"></asp:Textbox>
@@ -289,11 +285,11 @@ body{
                  </tr>
             <tr>
                    <td>
-                       <asp:Label runat="server" ID="lblcount" Text="Country:"></asp:Label>
+                       <asp:Label runat="server" ID="lblcount" Text="Country*:"></asp:Label>
                    </td>
                      <td>
                   
-                         <asp:DropDownList runat="server" ID="ddlcountry" Width="150px" AppendDataBoundItems="true" AutoPostBack="true"></asp:DropDownList>
+                         <asp:DropDownList runat="server" ID="ddlcountry" Width="150px" AppendDataBoundItems="true" ></asp:DropDownList>
                 </td>
                
                   <td>
@@ -306,7 +302,7 @@ body{
             <tr>
                  
                   <td>
-                    <asp:label runat="server" ID="Label2" Text="Pincode" ></asp:label>
+                    <asp:label runat="server" ID="Label2" Text="Pincode*:" ></asp:label>
                 </td>
                 <td>
                     <asp:Textbox runat="server" ID="txtpin"></asp:Textbox>
@@ -317,46 +313,99 @@ body{
               
            
         </table>
+               
                 
-            
                 <center>
                 <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server"  
-ControlToValidate="txtmobile" ErrorMessage="Please Enter valid mobile Number"  
+ControlToValidate="txtmobile" ErrorMessage="Please Enter valid mobile Number" ForeColor="Red" 
 ValidationExpression="[0-9]{10}"></asp:RegularExpressionValidator> 
-                 <asp:CompareValidator ID="CompareValidator1" runat="server" operator="Equal"
-     ControlToValidate="txtconfirm"
-     CssClass="ValidationError"
-     ControlToCompare="txtpass"
-     ErrorMessage="Password Not Matching" 
-     ToolTip="Password must be the same" />
-            
-
-    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
-     ErrorMessage="&laquo; (Required)" 
-     ControlToValidate="txtconfirm"
-     CssClass="ValidationError" Style="color:red"
-     ToolTip="Compare Password is a Required field">
-    </asp:RequiredFieldValidator>
-                 <asp:RequiredFieldValidator runat="server" id="reqName" controltovalidate="txtfirst" ForeColor="red" errormessage="Please enter your First name!" />
-                 <asp:RequiredFieldValidator runat="server" id="RequiredFieldValidator1" ForeColor="red" controltovalidate="txtlastname" errormessage="Please enter your Last name!" />
-                      <asp:RequiredFieldValidator runat="server" id="RequiredFieldValidator3" ForeColor="red" InitialValue="Select" controltovalidate="ddlcountry" errormessage="Please select  Country!" />
-               
+        
                     </center>
+                <asp:Label runat ="server" ID ="lblerror" ForeColor="Red" ></asp:Label>
                <asp:Button  runat="server" ID="btnregist" Text="Register" class="a_button" CausesValidation="false"   /><br />
-           
-           <asp:Label runat="server" Text="Forgot Password" Style="color:darkblue;" Font-Underline="true" ></asp:Label>
+          
                  </div>
-            <script>
-                function functionlogin()
-                {
-                    document.getElementById("registration").style.display="none"
-                    document.getElementById("login").style.display="block"
+            </center> 
+                        <center>
+            <div class="row" id="forgotpassword" style="margin-top:100px; background-color:darkgrey;border-radius:25px;width:50%;height :300px;display:none">
+    <h1>Radhasoami</h1>
+                <h3>Welcome To RadhaSoami Faith Website</h3>
+               
+                <table class="tableContent">
+                    <tr>
+                        <td>
+                             <asp:Label runat="server" ID="Label5" Text="Email-Address*:"></asp:Label>
+                        </td>
+                        <td>
+                            <asp:TextBox runat="server" ID="TextBox3"></asp:TextBox>
+                        </td>
+                    </tr>
+                    
+                </table>
+                <asp:Label runat="server" Visible="false" ForeColor="Red" ID="Label11">
+                </asp:Label>
+             <br />
+                <asp:Button runat="server" ID="btn_forgotpassword" Text="Request Password"  Class="a_button" style="width:200px" CausesValidation="false"    />
+ 
+                </div>
+                </center>
+        <center>
+                 </div>
+                            </center>
+              </ContentTemplate>
+                </asp:UpdatePanel>
+          
+        <script>
+            $(".toggle-password").click(function () {
+
+                $(this).toggleClass("fa-eye fa-eye-slash");
+                var input = $($(this).attr("toggle"));
+                if (input.attr("type") == "password") {
+                    input.attr("type", "text");
+                } else {
+                    input.attr("type", "password");
                 }
-                function functionregistration() {
-                    document.getElementById("login").style.display = "none"
-                    document.getElementById("registration").style.display = "block"
+            });
+           
+            function functionlogin() {
+                document.getElementById("registration").style.display = "none"
+                document.getElementById("forgotpassword").style.display = "none"
+                document.getElementById("login").style.display = "block"
+            }
+            function functionregistration() {
+                document.getElementById("login").style.display = "none"
+                document.getElementById("forgotpassword").style.display = "none"
+                document.getElementById("registration").style.display = "block"
+            }
+            function functionforgotpassword() {
+                document.getElementById("login").style.display = "none"
+                document.getElementById("forgotpassword").style.display = "block"
+                document.getElementById("registration").style.display = "none"
+
+            }
+            
+            function show() {
+                var p = document.getElementById('txtpass');
+                p.setAttribute('type', 'text');
+            }
+
+            function hide() {
+                var p = document.getElementById('txtpass');
+                p.setAttribute('type', 'password');
+            }
+
+            var pwShown = 0;
+
+            document.getElementById("eye").addEventListener("click", function () {
+                if (pwShown == 0) {
+                    pwShown = 1;
+                    show();
+                } else {
+                    pwShown = 0;
+                    hide();
                 }
-            </script>
+            }, false);
+        </script>
     </form>
 </body>
 </html>
